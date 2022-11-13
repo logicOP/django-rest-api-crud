@@ -9,3 +9,4 @@ urlpatterns = [
     path('component/<int:pk>/update/', ComponentUpdateApi.as_view()),
     path('component/<int:pk>/delete/', ComponentDeleteApi.as_view()),
 ]
+
