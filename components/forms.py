@@ -1,5 +1,5 @@
 from django import forms
-from .models import Components, BriefDescription, AdvantageAndDisadvantage
+from .models import Components, BriefDescription, AdvantageAndDisadvantage, Users
 
 
 class ComponentsForm(forms.ModelForm):
@@ -11,6 +11,15 @@ class ComponentsForm(forms.ModelForm):
             "image",
             "description"
         ]
+
+
+class UsersForm(forms.ModelForm):
+    name = forms.CharField(label="Name")
+
+    class Meta:
+        model = Users
+
+        fields = '__all__'
 
 
 class AdvantageAndDisadvantageForm(forms.ModelForm):
